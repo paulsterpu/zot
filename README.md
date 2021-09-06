@@ -17,6 +17,7 @@ https://anuvu.github.io/zot/
 * Uses [OCI image layout](https://github.com/opencontainers/image-spec/blob/master/image-layout.md) for image storage
   * Can serve any OCI image layout as a registry 
 * Supports [helm charts](https://helm.sh/docs/topics/registries/)
+* Behavior controlled via [configuration](./examples/README.md)
 * Supports image deletion by tag
 * Currently suitable for on-prem deployments (e.g. colocated with Kubernetes)
 * Compatible with ecosystem tools such as [skopeo](#skopeo) and [cri-o](#cri-o)
@@ -27,6 +28,8 @@ https://anuvu.github.io/zot/
   * TLS mutual authentication
   * HTTP *Basic* (local _htpasswd_ and LDAP)
   * HTTP *Bearer* token
+* Supports Identity-Based Access Control
+* Supports live modifications on the config file while zot is running (Authorization config only)
 * Doesn't require _root_ privileges
 * Storage optimizations:
   * Automatic garbage collection of orphaned blobs
